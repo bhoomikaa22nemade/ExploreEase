@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siolim House – North Goa</title>
+  <link rel="stylesheet" href="hotel.css">
+</head>
+<body>
+
+  
+
+  <!-- Hero Image -->
+  <section class="hotel-hero">
+    <img src="images/hotelll.jpg" alt="Siolim House Goa">
+  </section>
+
+  <!-- Details Section -->
+  <section class="hotel-details">
+    <h2>About Siolim House</h2>
+    <p>
+      Siolim House is a beautifully restored 350-year-old Portuguese-Goan mansion in North Goa. 
+      With just 9 exclusive rooms, it offers a tranquil escape from the crowds, combining heritage charm 
+      with modern comfort. The property is surrounded by lush gardens, a swimming pool, and peaceful courtyards. 
+      Guests can enjoy authentic Goan-Portuguese architecture and warm hospitality.
+    </p>
+
+    <h2>Highlights</h2>
+    <ul>
+      <li>🏡 Heritage Portuguese-Goan mansion</li>
+      <li>🌴 Lush tropical gardens</li>
+      <li>🏊 Swimming pool & courtyards</li>
+      <li>🍽 Traditional Goan & continental dining</li>
+      <li>📍 Located in Siolim village, close to Morjim, Ashwem & Vagator beaches</li>
+    </ul>
+
+    <h2>Room Charges</h2>
+    <p>Starting from ₹9,000 per night (varies by season).</p>
+
+    <h2>Location</h2>
+    <p>Siolim Village, North Goa, India</p>
+    <a href="https://goo.gl/maps/9ZrZJ9XEkV1mZbCr9" target="_blank" class="map-btn">📍 View on Google Maps</a>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section class="booking-form">
+    <h2>Book Your Stay</h2>
+    <form id="bookingForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="checkin">Check-in Date</label>
+      <input type="date" id="checkin" name="checkin" required>
+
+      <label for="checkout">Check-out Date</label>
+      <input type="date" id="checkout" name="checkout" required>
+
+      <label for="guests">Number of Guests</label>
+      <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+      <label for="room">Room Type</label>
+      <select id="room" name="room">
+        <option value="heritage">Heritage Room</option>
+        <option value="luxury">Luxury Suite</option>
+        <option value="family">Family Villa</option>
+      </select>
+
+      <button type="submit" class="book-btn">Book Now</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="hotel-footer">
+    <p>© 2025 ExploreEase | Goa Hotels</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // prevent page refresh
+      const name = document.getElementById("name").value;
+      alert("Thank you " + name + "! 🎉 Your booking request for Siolim House has been received.");
+    });
+  </script>
+
+</body>
+</html>

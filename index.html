@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExploreEase – Discover India</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap"
+    rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">ExploreEase</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="booking.html" id="bookingIcon">Bookings (<span id="bookingCount">0</span>)</a></li>
+    </ul>
+  </nav>
+
+  <!-- BG Section -->
+  <header class="hero" id="home">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="images/White Minimalist Travel Vlog Youtube Intro.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay">
+      <h1>Explore India with Ease</h1><br>
+      <p>Explore - Experience - Enjoy.</p>
+      <p>Where Every Journey Becomes a Story..</p>
+
+      <form id="searchForm">
+        <input type="text" placeholder="From" list="cities" required />
+        <input type="text" placeholder="To" list="cities" required />
+        <input type="date" required />
+        <input type="number" placeholder="Travellers" min="1" required />
+        <select id="transportMode">
+          <option value="Flight">Flight</option>
+          <option value="Train">Train</option>
+
+        </select>
+        <button type="submit">Search</button>
+      </form>
+      <datalist id="cities">
+        <option value="Mumbai">
+        <option value="Pune">
+        <option value="Delhi">
+        <option value="Kerala">
+        <option value="Goa">
+        <option value="Kashmir">
+        <option value="Jaipur">
+        <option value="Manali">
+        <option value="Taj Mahal">
+
+      </datalist>
+    </div>
+  </header>
+
+
+
+
+
+  <!-- Featured Destinations -->
+  <section class="tours">
+    <h2>Featured Destinations</h2>
+
+    <div class="tour-grid">
+      <div class="tour-card">
+
+        <a href="goa.html">
+          <img src="images/goaaaa.png" alt="Goa Beach" />
+          <h3>Goa Beach Escape</h3><br>
+          <p>Beach · Enjoyment</p>
+
+          <span class="price">₹24,999</span>
+        </a>
+      </div>
+      <div class="tour-card">
+        <a href="kerala.html">
+          <img src="images/Kerala.png" alt="Kerala Backwaters" />
+          <h3>Kerala Backwaters</h3><br>
+          <p>Houseboat · Munnar</p>
+
+          <span class="price">₹24,999</span>
+        </a>
+      </div>
+      <div class="tour-card">
+        <a href="jaipur.html">
+          <img src="images/rajasthan.png" alt="Rajasthan Royal Tour" />
+          <h3>Rajasthan Royal Tour</h3><br>
+          <p>Jaipur · Udaipur </p>
+          <span class="price">₹24,999</span>
+        </a>
+      </div>
+      <div class="tour-card">
+        <img src="images/t.png" alt="Taj Mahal" />
+        <h3>Taj Mahal</h3><br>
+        <p>Agra · Symbol of Love</p>
+        <span class="price">₹24,999</span>
+      </div>
+
+      <div class="tour-card">
+        <img src="images/Kashmir.png" alt="Kashmir Paradise" />
+        <h3>Kashmir Paradise</h3><br>
+        <p>Srinagar · Gulmarg</p>
+
+        <span class="price">₹29,999</span>
+      </div>
+      <div class="tour-card">
+        <img src="images/manali.png" alt="Manali Mesmerizing" />
+        <h3>Manali Mesmerizing</h3><br>
+        <p>Port Blair · Havelock</p>
+
+        <span class="price">₹32,999</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Advertisement Banner -->
+  <section class="ad-banner">
+    <img src="images/banner.png" alt="Special Offer">
+    <div class="ad-overlay">
+      <h2>Special Offer: 25% OFF on Kashmir Paradise Tour!</h2>
+      <p>Book before Sept 30th and enjoy premium stays + free guided tours.</p>
+      <a href="#tours" class="ad-btn">Book Now</a>
+    </div>
+  </section>
+
+
+  <section class="about" id="about">
+    <h2>Little Summary About Us</h2>
+    <p>
+      In 2024, ExploreEase was founded with the mission of helping people discover new horizons—
+      beaches, mountains, and peaceful nature—with comfort and care. Let us help you create lifelong memories.
+    </p>
+  </section>
+
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <h2>ExploreEase</h2>
+        <p>Discover India with ease – beaches, hills, forts, and culture.</p>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: <a href="mailto:support@exploreease.in">support@exploreease.in</a></p>
+        <p>Phone: +91 12345 67890</p>
+        <p>Location: Mumbai, India</p>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 ExploreEase. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+
+
+    // Show total bookings count in navbar
+    document.addEventListener("DOMContentLoaded", () => {
+      let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+      document.getElementById("bookingCount").innerText = bookings.length;
+    });
+  </script>
+
+
+
+
+
+  <script src="travel.js"></script>
+</body>
+
+</body>
+
+</body>
+
+</html>

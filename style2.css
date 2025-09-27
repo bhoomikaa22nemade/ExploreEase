@@ -1,0 +1,108 @@
+:root {
+  --bg: #FFFFFF;
+  --text: #1F1F1F;
+  --muted: #6B6B6B;
+  --accent: #4f46e5;
+  --card: #FFFFFF;
+  --shadow: 0 8px 20px rgba(31,31,31,0.06);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family:'Georgia', serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Canvas wrapper */
+.canvas {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Contact form container */
+.contact h1 {
+  font-family: "Georgia", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+.contact h1::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), rgba(201,162,39,0.35));
+  opacity: 0.6;
+}
+
+.contact p.lead {
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+form#contactForm {
+  display: grid;
+  gap: 16px;
+}
+
+form#contactForm input,
+form#contactForm textarea {
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  font-family: "Georgia", serif;
+  transition: border-color 0.3s ease;
+}
+
+form#contactForm input:focus,
+form#contactForm textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+form#contactForm button {
+  padding: 12px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form#contactForm button:hover {
+  background: #4f46e5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

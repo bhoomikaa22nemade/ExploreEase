@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rambagh Palace – Jaipur</title>
+  <link rel="stylesheet" href="jaipurh.css">
+</head>
+<body>
+
+  <!-- Hero Image -->
+  <section class="hotel-hero">
+    <img src="images/rambaugh.avif" alt="Rambagh Palace Jaipur">
+  </section>
+
+  <!-- Details Section -->
+  <section class="hotel-details">
+    <h2>About Rambagh Palace</h2>
+    <p>
+      Once the residence of the Maharaja of Jaipur, <strong>Rambagh Palace</strong> is now a luxury Taj heritage hotel. 
+      Known as the "Jewel of Jaipur", it is a breathtaking palace with elegant Rajput architecture, lavish gardens, and unmatched royal hospitality. 
+      Guests experience the grandeur of Rajasthan’s regal past with world-class luxury.
+    </p>
+
+    <h2>Highlights</h2>
+    <ul>
+      <li>👑 Former royal residence of the Maharaja of Jaipur</li>
+      <li>🌺 Expansive Mughal gardens & courtyards</li>
+      <li>🏊 Outdoor swimming pools & luxury spa</li>
+      <li>🍽 Fine dining at Suvarna Mahal & Rajput Room</li>
+      <li>🎭 Royal experiences – Elephant polo, cultural performances</li>
+    </ul>
+
+    <h2>Room Charges</h2>
+    <p>Starting from ₹45,000 per night (varies by room type and season).</p>
+
+    <h2>Location</h2>
+    <p>Bhawani Singh Road, Jaipur, Rajasthan, India</p>
+    <a href="https://goo.gl/maps/xvXo1sQXgN82" target="_blank" class="map-btn">📍 View on Google Maps</a>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section class="booking-form">
+    <h2>Book Your Stay</h2>
+    <form id="bookingForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="checkin">Check-in Date</label>
+      <input type="date" id="checkin" name="checkin" required>
+
+      <label for="checkout">Check-out Date</label>
+      <input type="date" id="checkout" name="checkout" required>
+
+      <label for="guests">Number of Guests</label>
+      <input type="number" id="guests" name="guests" min="1" max="10" required>
+
+      <label for="room">Room Type</label>
+      <select id="room" name="room">
+        <option value="palace-room">Palace Room</option>
+        <option value="historic-suite">Historic Suite</option>
+        <option value="royal-suite">Royal Suite</option>
+        <option value="grand-suite">Grand Presidential Suite</option>
+      </select>
+
+      <button type="submit" class="book-btn">Book Now</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="hotel-footer">
+    <p>© 2025 ExploreEase | Jaipur Hotels</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // prevent page refresh
+      const name = document.getElementById("name").value;
+      const room = document.getElementById("room").value;
+      alert("Thank you " + name + "! 🎉 Your booking request for a " + room + " at Rambagh Palace has been received.");
+    });
+  </script>
+
+</body>
+</html>

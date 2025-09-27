@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bookings – ExploreEase</title>
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+  <h1>📑 My Bookings</h1>
+  <div id="bookingList"></div>
+
+  <script>
+    // ✅ Same catalog from your main JS
+    const travelCatalog = {
+      Jaipur: { price: "₹24,999" },
+      Kerala: { price: "₹26,499" },
+      Goa: { price: "₹22,999" },
+      Kashmir: { price: "₹28,999" },
+      Manali: { price: "₹23,499" },
+      Agra: { price: "₹14,999" }
+    };
+
+    function loadBookings() {
+      let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+      let listDiv = document.getElementById("bookingList");
+      listDiv.innerHTML = "";
+
+      if (bookings.length === 0) {
+        listDiv.innerHTML = "<p class='empty'>No bookings yet.</p>";
+      } else {
+        bookings.forEach((b, i) => {
+          const price = travelCatalog[b.to] ? travelCatalog[b.to].price : "₹--";
+          listDiv.innerHTML += `
+            <div class="booking-card">
+              <div class="booking-header">
+                <h3>🎟️ ${b.from} ➝ ${b.to}</h3>
+                <button class="delete-btn" onclick="deleteBooking(${i})">❌ Cancel</button>
+              </div>
+              <p><b>Passenger:</b> ${b.passenger1 || "-"} ${b.passenger2 ? " & " + b.passenger2 : ""}</p>
+              <p><b>Phone:</b> ${b.phone}</p>
+              <p><b>Date:</b> ${b.date}</p>
+              <p><b>Mode:</b> ${b.mode}</p>
+              <p class="price"><b>Total:</b> ${price}</p>
+              <p class="bookedOn">📅 Booked On: ${b.bookedOn}</p>
+            </div>
+          `;
+        });
+      }
+    }
+
+    function deleteBooking(index) {
+      let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+      bookings.splice(index, 1);
+      localStorage.setItem("bookings", JSON.stringify(bookings));
+      loadBookings();
+
+      const countElem = document.getElementById("bookingCount");
+      if (countElem) countElem.innerText = bookings.length;
+    }
+
+    loadBookings();
+  </script>
+</body>
+</html>
+

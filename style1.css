@@ -1,0 +1,107 @@
+:root {
+  --bg: #FFFFFF;
+  --text: #1F1F1F;
+  --muted: #111010;
+  --accent: #4f46e5;
+  --card: #FFFFFF;
+  --shadow: 0 20px 20px rgba(31,31,31,0.06);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Georgia", serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Canvas-style container */
+.container {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+  max-width: 700px;
+  width: 100%;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Headings */
+h1 {
+  font-family: "Georgia", serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.25rem;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -2px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), rgba(201,162,39,0.35));
+  opacity: 0.6;
+}
+
+h3 {
+  font-family: "Georgia", serif;
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+/* Lists */
+ul {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 1rem;
+}
+
+ul li {
+  margin: 0.4rem 0;
+}
+
+ul li::marker {
+  color: var(--accent);
+}
+
+ul li strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Divider */
+hr {
+  height: 2px;
+  border: 0;
+  background: linear-gradient(90deg, transparent 0%, var(--accent) 20%, var(--accent) 80%, transparent 100%);
+  opacity: 0.25;
+  margin: 1.25rem 0;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
